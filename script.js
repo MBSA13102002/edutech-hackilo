@@ -6,17 +6,17 @@ var options = {
     "currency": "INR",
     "name": "HACKILO",
     "description": "EDUCATIONAL HACKS",
-    "image": "https://example.com/your_logo",
-    "order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "image": "https://1.bp.blogspot.com/-AJ33cAJxee8/YHHyzdwcTxI/AAAAAAAAATk/gCEXVu8IvYkawDC1vBGYrrFKMESdOUmYACK4BGAYYCw/s113/LOGO.jpeg",
+    "id": Date.now().toString(), //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         alert(response.razorpay_payment_id);
         alert(response.razorpay_order_id);
         alert(response.razorpay_signature)
     },
     "prefill": {
-        "name": "Gaurav Kumar",
-        "email": "gaurav.kumar@example.com",
-        "contact": "9999999999"
+        "name": document.getElementById("name").value,
+        "email": document.getElementById("email").value,
+        "contact": document.getElementById("number").value
     },
     "notes": {
         "address": "Razorpay Corporate Office"
@@ -35,9 +35,9 @@ rzp1.on('payment.failed', function (response){
         alert(response.error.metadata.order_id);
         alert(response.error.metadata.payment_id);
 });
-document.getElementById('rzp-button1').onclick = function(e){
-    rzp1.open();
-    e.preventDefault();
-}
+// document.getElementById('rzp-button1').onclick = function(e){
+//     rzp1.open();
+//     e.preventDefault();
+// }
 
 }
