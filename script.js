@@ -7,7 +7,7 @@ var options = {
     "name": "HACKILO",
     "description": "EDUCATIONAL HACKS",
     "image": "https://1.bp.blogspot.com/-AJ33cAJxee8/YHHyzdwcTxI/AAAAAAAAATk/gCEXVu8IvYkawDC1vBGYrrFKMESdOUmYACK4BGAYYCw/s113/LOGO.jpeg",
-    "id": Date.now().toString(), //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "order_id": Date.now().toString(), //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         alert(response.razorpay_payment_id);
         alert(response.razorpay_order_id);
