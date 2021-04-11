@@ -1,1 +1,3 @@
-alert("done")
+function pay(){
+    alert("done")
+}
