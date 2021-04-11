@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
     <form onsubmit="pay()">
     <label for="">NAME</label>
-    <input type="text" placeholder="NAME">
+    <input type="text" placeholder="NAME" id="name">
     <br>
     <label for="">E-MAIL</label>
-    <input type="text" placeholder="E-MAIL">
+    <input type="text" placeholder="E-MAIL" id="email">
     <br>
     <label for="">MOBILE.NO</label>
-    <input type="text" placeholder="MOBILE.NO">
+    <input type="text" placeholder="MOBILE.NO" id="number">
     <br>
     <button type="submit">PROCEED TO CHECKOUT</button>
 </form>
