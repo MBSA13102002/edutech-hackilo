@@ -1,148 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/LOGO2.jpeg" type="image/x-icon">
+  <!-- Box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-span.price {
-  float: right;
-  color: grey;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  } 
-}
-</style>
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>HACKILO-EDUTECH</title>
 </head>
+
 <body>
-
-
-<div class="row"  style="padding:100px 300px;">
-  <div class="col-50">
-    <div class="container" >
-      <form  action="payment.php" method="post" style="padding: 25px;">
-      
-        <div class="row" >
-          <div class="col-25">
-            <h3 style="text-align: center;margin:20px 10px;font-family: lato;">Checkout Form</h3>
-          
-
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="name" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-            <input type="hidden" value="<?php echo 'OID'.rand(100,1000);?>" name="orderid">
-            <input type="hidden" value="<?php echo 1;?>" name="amount">
-            <label for="city"><i class="fa fa-mobile"></i> Mobile</label>
-            <input type="text" id="city" name="mobile" placeholder="Mobile Number">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-
-
-          
+  <!-- Header -->
+  <header id="home" class="header">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation container">
+        <div class="logo">
+          <h1><b>HACKILO-EDUTECH</b></h1>
         </div>
-       
-        <input type="submit"  value="Pay Now" class="btn">
-      </form>
-    </div>
-  </div>
- 
-</div>
 
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+              <h1><b>HACKILO-EDUTECH</b></h1>
+            </div>
+            <div class="close">
+              <i class="bx bx-x"></i>
+            </div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link scroll-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="product.html" class="nav-link">Products</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#about" class="nav-link scroll-link">About</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a href="#contact" class="nav-link scroll-link">Contact</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+            </li> -->
+          </ul>
+        </div>
+
+        <!-- <a href="cart.html" class="cart-icon">
+          <i class="bx bx-shopping-bag"></i>
+        </a> -->
+
+        <div class="hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <img src="images/LOGO.jpeg" alt="" class="hero-img" style="border-radius:200px" />
+
+    <div class="hero-content">
+      <h2><span class="discount">90%</span> OFF ON ALL E-BOOKS</h2>
+      <h1>
+        <span>Best Collection</span>
+        <span>of JEE PREP</span>
+        <span>Materials</span>
+        <span>at just ₹6</span>
+        <span>per E-BOOK</span>
+      </h1>
+      <a class="btn" href="product.html">shop now</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Featured -->
+    <section class="section featured">
+      <div class="title">
+        <h1>E-BOOKS</h1>
+      </div>
+
+      <div class="product-center container">
+        <div class="product">
+          <div class="product-header">
+         <img src="images/productlogo.jpeg" alt="">
+                <ul class="icons">
+              <label style="color:white"><b>CLICK THE LINK BELOW TO<br>PURCHASE THE E-BOOK</b></label>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="https://rzp.io/l/jiNmzm8m">
+              <h3>QUALITATIVE INORGANIC SALT ANALYSIS</h3>
+              <h3>(HANDWRITTEN)</h3>
+            </a>
+            <h4 class="price">₹6</h4>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product-header">
+            <a><img src="./images/comingsoon.png" alt=""></a>
+            <ul class="icons">
+              <label style="color:white"><b>CLICK THE LINK BELOW TO<br>PURCHASE THE E-BOOK</b></label>
+            </ul>
+          </div>
+          <div class="product-footer">
+            <a href="#">
+              <h3>HIGHLY CONCEPTUAL PHYSICS QUESTION</h3>
+              <h3>(HANDWRITTEN)</h3>
+            </a>
+    
+            <!-- <h4 class="price">$50</h4> -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Product Banner -->
+    <section class="section">
+      <div class="product-banner" >
+        <div class="left">
+          <img src="images/LOGO2.jpeg" style="border-radius: 50px; height: 70vh;">
+        </div>
+        <div class="right">
+          <div class="content">
+            <h2><span class="discount">90% </span> OFF ON ALL E-BOOKS</h2>
+            <h1>
+              <span>Online Hub For</span>
+              <span>Best Level JEE </span>
+              <span> Prep Materials </span>
+            </h1>
+            <a class="btn" href="product.html">shop now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="testimonial-center container">
+        <div class="testimonial">
+          <span>&#9733;</span><br><br><br>
+          <p>
+           <b>MATHEMATICS</b> is not about numbers,<br>equations,computations,or 
+           algorithms,it is about <b>UNDERSTANDING</b>
+          </p>
+          <div class="img-cover">
+            <img src="./images/maths.png" alt="" />
+          </div>
+          <h4>--WILLIAM PAUL THURSTON</h4>
+        </div>
+        <div class="testimonial">
+          <span>&#9733;</span><br><br><br>
+          <p>
+            When you change the way you look at things,<b>the things you look at changes.</b>
+          </p>
+    
+          <div class="img-cover">
+            <img src="./images/physics.png" alt="" />
+          </div>
+          <h4>--STEVE JOBS</h4>
+        </div>
+        <div class="testimonial">
+          <span>&#9733;</span><br><br><br>
+          <p>
+           The Meeting of two personalities is like the contact of two <b>chemical substances</b>:if there is any reaction,both are transformed
+          </p>
+          <div class="img-cover">
+            <img src="./images/chemistry.png" alt="" />
+          </div>
+          <h4>--CARL JUNG</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="section" style="display: none;">
+      <div class="brands-center container">
+        <div class="brand">
+          <img src="./images/brand1.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="./images/brand2.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="./images/brand1.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="./images/brand2.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="./images/brand1.png" alt="" />
+        </div>
+        <div class="brand">
+          <img src="./images/brand2.png" alt="" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          <h3>PHYICS</h3>
+          <a href="#">E-BOOKS TO BE UPLOADED SOON</a>
+        </div>
+        <div class="footer-center">
+          <h3>CHEMISTRY</h3>
+          <a href="https://rzp.io/l/jiNmzm8m">QUALITATIVE INORGANIC SALT ANALYSIS(HANDWRITTEN)</a>
+        </div>
+        <div class="footer-center">
+          <h3>MATHS</h3>
+          <a href="#">E-BOOKS TO BE UPLOADED SOON</a>
+        </div>
+        <div class="footer-center">
+          <h3>HACKILO-EDUTECH</h3>
+     
+          <div>
+            <span>
+              <i class="far fa-envelope"></i>
+            </span>
+            hackiloedutech@gmail.com
+          </div>
+          <div>
+            <span>
+              <i class="far fa-paper-plane"></i>
+            </span>
+            Chhattisgarh, INDIA
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
