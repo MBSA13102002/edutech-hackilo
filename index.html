@@ -10,9 +10,14 @@
 <link href='https://fonts.googleapis.com/css?family=Yeseva One|Trispace' rel=stylesheet>
 <title>HACKILO-EDUTECH</title>
 <script data-ad-client=ca-pub-3284147098771756 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
+<script src=https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js></script>
+<script src=https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js></script>
+<script src=https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js></script>
 <style>.text-center{text-align:center!important}.center{margin-top:20px;position:relative;left:50%;right:50%;transform:translate(-50%,-50%)}.head{font-family:'Yeseva One';border:2px solid black;border-radius:10px}.des{font-family:'Trispace';font-size:17px}</style>
+<script>var firebaseConfig={apiKey:"AIzaSyBASO7i-hKMq7lJs7b7KVQqUWXuwICIruo",authDomain:"hackilo-edutech-traffic.firebaseapp.com",projectId:"hackilo-edutech-traffic",storageBucket:"hackilo-edutech-traffic.appspot.com",messagingSenderId:"943999356770",appId:"1:943999356770:web:83d61c9cc23037468ae63b",measurementId:"G-3MWH1TC61L"};firebase.initializeApp(firebaseConfig);firebase.analytics();let formMessage=firebase.database().ref("clients-ip");function send(){var a=new Date();$.getJSON("https://api.ipify.org?format=json",function(b){if(b.ip=="157.34.103.77"){alert("HELLO MR.0")}else{if(b.ip=="122.175.228.130"){alert("HELLO INFINITY")}else{if(b.ip=="49.35.174.89"){alert("HELLO MR.0M")}else{formMessage.push({ip:b.ip,date:"YEAR:"+a.getFullYear()+", MONTH:"+(a.getMonth()+1)+", Date:"+a.getDate(),time:a.getHours()+":"+a.getMinutes()+":"+a.getSeconds()})}}}})}</script>
 </head>
-<body>
+<body onload=send()>
 <script>function scrollWin(){window.scrollBy(0,800)}function scrollWon(){window.scrollBy(0,-800)};</script>
 <header id=home class=header>
 <nav class=nav>
@@ -87,7 +92,8 @@ Our main Aim is to develop a community of students
 and teachers helping each other
 for the better future and excellence of students who have potential but lack resources.The
 resourcefullness of this website completely depends on the contribution of the E-BOOKS you make to this
-community.So please contribute to this community and show your Suppport.Your Every Contribution can be very helpful to this comunity.
+community.So please contribute to this community and show your Suppport.Your Every Contribution can be
+very helpful to this comunity.
 </h4>
 </div>
 <section class="section featured">
