@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>CONTACT FORM</title>
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link href='https://fonts.googleapis.com/css?family=Yeseva One|Trispace' rel=stylesheet>
+<link rel="shortcut icon" href=./images/LOGO.png type=image/x-icon>
+<style>body{background-color:#ebe0e0}form{border:2px solid black;border-radius:20px}.label{font-family:Trispace;margin-left:20px}.head{font-family:'Yeseva One'}</style>
+<script src=https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js></script>
+<script src=https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js></script>
+<script src=https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js></script>
+<script>var firebaseConfig={apiKey:"AIzaSyD-dljA9xatC5tY_xntrR1fMZZcv0H3qvM",authDomain:"hackilo-edutech-contact-form.firebaseapp.com",projectId:"hackilo-edutech-contact-form",storageBucket:"hackilo-edutech-contact-form.appspot.com",messagingSenderId:"590022236783",appId:"1:590022236783:web:75b6cbd0ebd67e23cccb9a",measurementId:"G-LSNMWPXBNK"};firebase.initializeApp(firebaseConfig);firebase.analytics();let formMessage=firebase.database().ref("FORM DATA");function submit_form(){var b=document.getElementById("name").value;var a=document.getElementById("email").value;var c=document.getElementById("message").value;formMessage.push({name:b,email:a,message:c})};</script>
+</head>
+<body>
+<center>
+<img src=/images/LOGO.png alt width=200 height=170>
+</center>
+<div class=container>
+<form>
+<h1 class="text-center head">CONTACT US</h1>
+<div class=mb-3>
+<label for=exampleInputName1 class="form-label label">Name</label>
+<input type=text class=form-control id=name aria-describedby=emailHelp>
+</div>
+<div class=mb-3>
+<label for=exampleInputEmail1 class="form-label label">Email address</label>
+<input type=email class=form-control id=email aria-describedby=emailHelp>
+<div id=emailHelp class="form-text label">We'll never share your email with anyone else.</div>
+</div>
+<div class=mb-3>
+<label for=exampleInputMessage1 class="form-label label">Message</label>
+<textarea type=text class=form-control id=message></textarea>
+</div>
+<center>
+<button type=submit class="btn btn-primary" onclick=submit_form()>Submit</button>
+</center>
+</form>
+<script src=/js/bootstrap.min.js></script>
+</div><br><br>
+<footer id=footer class="section footer" style=color:white>
+<div class="card text-center bg-dark">
+<div class=card-header>
+HACKILO-EDUTECH
+</div>
+<div class=card-body>
+<h5 class=card-title>Copyright <i>&#xa9</i> HACKILO-EDUTECH 2021</h5>
+<p class=card-text>Never Stop Your Development!!!</p>
+<a href=mailto:hackiloedutech@gmail.com class="btn btn-primary mx-5">Contact Us at E-MAIL</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
